@@ -41,8 +41,6 @@ const movies = [
   },
 ];
 
-
-
 mongoose.connect("mongodb+srv://Doggenn:Vega2016@cluster0.5rqmgtd.mongodb.net/movies")
 .then(async ()=> {
     const allMovies = await Movie.find();
