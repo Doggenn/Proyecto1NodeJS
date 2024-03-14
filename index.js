@@ -17,7 +17,7 @@ const { setError } = require("./src/utils/error.util");
 require("dotenv").config(); // desde aquí se cargan las var de entorno del .env, hasta aquí no existen
 const PORT = process.env.PORT || 3000;
 const app = express();
-const miSeed = require("./src/seed/movie.seed");
+//const miSeed = require("./src/seed/movie.seed");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // usar urlencode para las urls.
 connectMongo();
@@ -71,6 +71,6 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port : ${PORT}`);
 });
-app.get('/semilla', (req, res) => {
-  res.send(miSeed);
-});
+// app.get('/semilla', (req, res) => {
+//   res.send(miSeed);
+// });
